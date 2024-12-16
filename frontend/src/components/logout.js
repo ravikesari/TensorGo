@@ -10,9 +10,11 @@ function Logout() {
 
     return (
         <div>
-            <button onClick={handleLogout}>Logout</button>
+            <button 
+            className="bg-slate-100 px-6 py-1.5 rounded-md font-bold text-blue-400"
+            onClick={handleLogout}>Logout</button>
         </div>
-    );
+    )
 }
 
 export default Logout;
