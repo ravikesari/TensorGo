@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Login from "./components/login";
 import FeedbackForm from "./components/feedbackForm";
+import FeedbackHistory from "./components/feedbackHistory";
 import { createBrowserRouter, RouterProvider, Navigate } from "react-router-dom";
 
 const ProtectedRoute = ({ isAuthenticated, children }) => {
@@ -31,6 +32,14 @@ const App = () => {
       element: (
         <ProtectedRoute isAuthenticated={isAuthenticated}>
           <FeedbackForm />
+        </ProtectedRoute>
+      )
+    },
+    {
+      path: "/feedbackhistory",
+      element: (
+        <ProtectedRoute isAuthenticated={isAuthenticated}>
+          <FeedbackHistory/>
         </ProtectedRoute>
       )
     }

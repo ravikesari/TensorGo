@@ -19,20 +19,20 @@ const FeedbackForm = () => {
 
     try {
       const response = await axios.post('http://localhost:5000/api/feedback', feedbackData);
-      alert(response.data.message);
+
+      console.log(response.data);
 
       setCategory('Product Features');
       setRating(0);
       setComments('');
     } catch (error) {
-      alert('Failed to submit feedback. Please try again.');
       console.error(error);
     }
   }
 
 
   return (
-    <div className='h-screen'>
+    <div className=''>
       <Navbar />
       <p className='text-blue-400 font-bold text-4xl pt-16 text-center'>Feedback form</p>
       <div className='w-full h-full flex justify-center pt-3'>

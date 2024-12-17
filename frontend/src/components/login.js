@@ -10,6 +10,7 @@ function Login({onLoginSuccess}) {
         const { credential } = credentialResponse;
 
         const userInfo = jwtDecode(credential);
+        console.log(userInfo)
 
         try {
             const response = await axios.post("http://localhost:5000/api/users", {
